@@ -1,11 +1,13 @@
 import { createRouter, createWebHistory } from "vue-router";
 import CounterView from "../views/CounterView.vue";
 import NotFound from "../views/NotFound.vue";
+import HomeView from "@/views/HomeView.vue";
 
 const routes = [
   {
     path: "/",
-    redirect: "/counter",
+    name: "Home",
+    component: HomeView,
   },
   {
     path: "/counter",
