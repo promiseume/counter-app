@@ -1,6 +1,9 @@
 <template>
   <section class="counter-section">
+    <div class="header-count">
+    <button @click="goBack" class="back-btn">&#8826; go back</button>
     <h1>Counter: {{ $store.getters.count }}</h1>
+  </div>
     <div class="form">
     <input type="number" v-model.number="value" />
     <button @click="setValue(value)">Set Value</button>
@@ -16,7 +19,7 @@
 <script>
 import { ref } from 'vue';
 import useCounter from '@/composables/useCounter';
-
+import router from '../router'
 export default {
   setup() {
     const { count, increment, decrement, reset, setValue } = useCounter();
@@ -31,6 +34,10 @@ export default {
       value,
     };
   },
+  methods: {
+    goBack() {
+      router.go(-1)
+    }}
 };
 </script>
 <style>
@@ -44,6 +51,24 @@ export default {
   background-color: #ffffff;
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
   padding: 20px;
+}
+.header-count{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 50%;
+}
+.back-btn{
+  background: none;
+  font-size: 20px;
+  margin: 0;
+  color: #191919;
+  border: none;
+}
+.back-btn:hover{
+  cursor: pointer;
+  color: #a6abe1;
 }
  .counter-section h1{
   font-size: 20px;

@@ -6,12 +6,25 @@
         This page you are looking for does not exist or might have been removed
       </h3>
       <div class="error-btn">
-        <button class="go-back">Go back</button>
-        <button class="go-back">Go Home</button>
+        <button @click="goBack" class="go-back">Go back</button>
+        <button @click="goHome" class="go-back">Go Home</button>
       </div>
     </div>
   </div>
 </template>
+<script>
+import router from '../router'
+export default {
+  methods: {
+    goBack() {
+      router.go(-1)
+    },
+    goHome() {
+      router.push('/')
+    }
+  }
+}
+</script>
 <style>
 .pageError {
   background-image: url(../assets/404.png);

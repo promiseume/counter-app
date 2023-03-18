@@ -3,16 +3,22 @@
   <div class="content">
     <h1>Welcome to my landing page!</h1>
     <p>This is a counter app made with vuex.</p>
-    <button class="btn">Go to Count Page</button>
+    <button @click="goCount" class="btn">Go to Count Page</button>
   </div>
 </div>
 </template>
 
 <script>
+import router from '../router'
 export default {
   name: 'HomeView',
   metaInfo: {
     title: 'My Landing Page'
+  },
+  methods: {
+    goCount() {
+      router.push('/counter')
+    }
   }
 }
 </script>
@@ -54,6 +60,13 @@ export default {
   margin: 0 10px;
   border-radius: 10px;
   color: #ffffff;
+  border: none;
+  outline: none;  
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  font-size: 18px;
+  font-weight: 800;
 }
 .btn:hover{
   background: #fff;
