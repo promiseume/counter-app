@@ -1,24 +1,7 @@
 # counter-app
 
-## Project setup
+## Alt school 3rd semester project
 ```
-yarn install
-```
+A  vue js application using the cli then setup a counter composable with increment, decrement, reset, setValue functions with a valid UI and vuex for state management.
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
-
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+https://counter-app-olive.vercel.app/
