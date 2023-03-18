@@ -1,18 +1,62 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="landing-page">
+  <div class="content">
+    <h1>Welcome to my landing page!</h1>
+    <p>This is a counter app made with vuex.</p>
+    <button class="btn">Go to Count Page</button>
   </div>
+</div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
 export default {
   name: 'HomeView',
-  components: {
-    HelloWorld
+  metaInfo: {
+    title: 'My Landing Page'
   }
 }
 </script>
+
+<style>
+.landing-page{
+  background-image: url(../assets/numbers.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  top: 0;
+  bottom: 0;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  width: 100%;
+  box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.5);
+}
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+}
+.content h1{
+  color: #fff;
+}
+.content p{
+  color: #fff;
+  font-size: 2rem;
+}
+.btn{
+  background: #191919;
+  padding: 22px 18px;
+  text-align: center;
+  margin: 0 10px;
+  border-radius: 10px;
+  color: #ffffff;
+}
+.btn:hover{
+  background: #fff;
+  color: #191919;
+}
+</style>
